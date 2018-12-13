@@ -1,0 +1,22 @@
+{
+  "name": "liri-node-app",
+  "version": "1.0.0",
+  "description": "app that takes user input and returns api search results",
+  "main": "liri.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DillonPittman/liri-node-app.git"
+  },
+  "author": "Dillon Pittman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DillonPittman/liri-node-app/issues"
+  },
+  "homepage": "https://github.com/DillonPittman/liri-node-app#readme",
+  "dependencies": {
+    "inquirer": "^6.2.1"
+  }
+}

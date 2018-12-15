@@ -1,6 +1,11 @@
-var inquirer = require(inquirer)
+var inquirer = require("inquirer")
 // require("dotenv").config();
-// var spotify = new Spotify(keys.spotify);
+var keys = require("./keys.js");
+var fs = require("fs");
+var spotifyApp = require("./spotify.js")
+var bandsInTownApp = require("./bandsInTown.js")
+var omdbApp = require("./omdb.js")
+
 
 inquirer
   .prompt([
@@ -10,13 +15,17 @@ inquirer
       name: "selection"
     }
   ])
-.then(function(a){
-  console.log('HERE', a)
-  switch(inquirerResponse.name){
+.then(function(inquirerResponse){
+  // console.log('HERE', inquirerResponse)
+  switch(inquirerResponse.selection){
+    case "Spotify": spotify(); break;
     case "spotify": spotify(); break;
-    case "bands in town": bandsInTown(); break;
+    case "Bandsintown": bandsintown(); break;
+    case "bandsintown": bandsintown(); break;
+    case "OMDB": omdb(); break;
+    case "Omdb": omdb(); break;
     case "omdb": omdb(); break;
-    default: console.log("Insufficient clearance to access feature: "+inquirerResponse.name)
+    default: console.log("There was a problem with your entry: " + inquirerResponse.selection)
   }
 })
 
@@ -24,8 +33,8 @@ function spotify(){
 console.log("This'll be Spotify stuff.")
 };
 
-function bandsInTown(){
-console.log("This will be Bands In Town stuff.")
+function bandsintown(){
+console.log("This will be Bandsintown stuff.")
 };
 
 function omdb(){

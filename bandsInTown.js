@@ -10,6 +10,7 @@ var BandsInTownApp = function () {
     axios.get(URL).then(function (response) {
       var data = response.data[0];
       var bandData = [
+        "Artist: " + artist,
         "Venue: " + data.venue.name,
         "Country: " + data.venue.country,
         "Date: " + data.datetime

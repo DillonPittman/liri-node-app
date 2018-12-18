@@ -13,77 +13,61 @@ var Omdb = new OmdbApp();
 inquirer
   .prompt([
     {
-      type:"input",
+      type: "input",
       message: "Search Spotify, Bands in Town, or OMDB?",
       name: "selection"
     }
   ])
-.then(function(inquirerResponse){
-  // console.log('HERE', inquirerResponse)
-  switch(inquirerResponse.selection.replace(/\s/g, '').toLowerCase()){
-    case "spotify": spotify(); break;
-    case "s": spotify(); break;
-    case "bandsintown": bandsintown(); break;
-    case "b": bandsintown(); break;
-    case "omdb": omdb(); break;
-    case "o": omdb(); break;
-    default: console.log("There was a problem with your entry: " + inquirerResponse.selection)
-  }
-})
-
-function spotify(){
-  // console.log("This'll be Spotify stuff.")
-  inquirer
-  .prompt([
-    {
-      type:"input",
-      message: "What song would you like to search for?",
-      name: "song"
+  .then(function (inquirerResponse) {
+    switch (inquirerResponse.selection.replace(/\s/g, '').toLowerCase()) {
+      case "spotify": spotify(); break;
+      case "s": spotify(); break;
+      case "bandsintown": bandsintown(); break;
+      case "b": bandsintown(); break;
+      case "omdb": omdb(); break;
+      case "o": omdb(); break;
+      default: console.log("There was a problem with your entry: " + inquirerResponse.selection)
     }
-  ])
-.then(function(inquirerResponse){
-  // console.log('SPOTIFY', inquirerResponse.song)
-    Spotify.findSong(inquirerResponse.song)
-})
+  })
+
+function spotify() {
+  inquirer
+    .prompt([
+      {
+        type: "input",
+        message: "What song would you like to search for?",
+        name: "song"
+      }
+    ])
+    .then(function (inquirerResponse) {
+      Spotify.findSong(inquirerResponse.song)
+    })
 };
 
-function bandsintown(){
-  // console.log("This will be Bandsintown stuff.")
+function bandsintown() {
   inquirer
-  .prompt([
-    {
-      type:"input",
-      message: "What artist would you like to search for?",
-      name: "band"
-    }
-  ])
-.then(function(inquirerResponse){
-  // console.log('BANDS', inquirerResponse.band)
-  BandsInTown.findArtist(inquirerResponse.band)
-})
+    .prompt([
+      {
+        type: "input",
+        message: "What artist would you like to search for?",
+        name: "band"
+      }
+    ])
+    .then(function (inquirerResponse) {
+      BandsInTown.findArtist(inquirerResponse.band)
+    })
 };
 
-function omdb(){
-  // console.log("this will be OMDB")
+function omdb() {
   inquirer
-  .prompt([
-    {
-      type:"input",
-      message: "What movie would you like to search for?",
-      name: "movie"
-    }
-  ])
-.then(function(inquirerResponse){
-  // console.log('SPOTIFY', inquirerResponse.movie)
-  Omdb.findMovie(inquirerResponse.movie)
-})
+    .prompt([
+      {
+        type: "input",
+        message: "What movie would you like to search for?",
+        name: "movie"
+      }
+    ])
+    .then(function (inquirerResponse) {
+      Omdb.findMovie(inquirerResponse.movie)
+    })
 };
-
-
-
-// pick (x,y)
-// switch(x)
-// case spotify
-// spotify
-// break
-// case omdb

@@ -12,19 +12,19 @@ var SpotifyApp = function () {
   this.findSong = function (songName) {
     spotify.search({ type: "track", query: songName }, function (error, data) {
       if (!error) {
-          var data = data.tracks.items[0];
-          var songData = [
-            "Song Name: " + data.name,
-            "Artist: " + data.artists[0].name,
-            "Album: " + data.album.name,
-            "Preview URL: " + data.external_urls.spotify,
-          ].join("\n\n");
-          fs.appendFile("log.txt", songData + divider, function (err) {
-            if (err) throw err;
-            console.log(songData)
-          });
+        var data = data.tracks.items[0];
+        var songData = [
+          "Song Name: " + data.name,
+          "Artist: " + data.artists[0].name,
+          "Album: " + data.album.name,
+          "Preview URL: " + data.external_urls.spotify,
+        ].join("\n\n");
+        fs.appendFile("log.txt", songData + divider, function (err) {
+          if (err) throw err;
+          console.log(songData)
+        });
       } else {
-        console.log("error occurred:" +error);
+        console.log("error occurred:" + error);
       }
     });
   };

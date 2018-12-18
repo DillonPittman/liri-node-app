@@ -147,3 +147,118 @@ Actors: Simon Pegg, Martin Freeman, Bill Nighy, Robert Popper
 Summary: A skilled London police officer is transferred to a small town that's harbouring a dark secret.
 ------------------------------------------------------------
 
+Title: Cars
+
+Year: 2006
+
+IMDB Rating: 7.1
+
+Rotten Tomatoes Rating: 74%
+
+Country: USA
+
+Language: English, Italian, Japanese, Yiddish
+
+Genre(s): Animation, Comedy, Family, Sport
+
+Director: John Lasseter, Joe Ranft(co-director)
+
+Actors: Owen Wilson, Paul Newman, Bonnie Hunt, Larry the Cable Guy
+
+Summary: A hot-shot race-car named Lightning McQueen gets waylaid in Radiator Springs, where he finds the true meaning of friendship and family.
+------------------------------------------------------------
+
+Title: Star Wars: Episode IV - A New Hope
+
+Year: 1977
+
+IMDB Rating: 8.6
+
+Rotten Tomatoes Rating: 93%
+
+Country: USA
+
+Language: English
+
+Genre(s): Action, Adventure, Fantasy, Sci-Fi
+
+Director: George Lucas
+
+Actors: Mark Hamill, Harrison Ford, Carrie Fisher, Peter Cushing
+
+Summary: Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the evil Darth Vader.
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+
+Title: Saw
+
+Year: 2004
+
+IMDB Rating: 7.6
+
+Rotten Tomatoes Rating: 49%
+
+Country: USA
+
+Language: English
+
+Genre(s): Horror, Mystery
+
+Director: James Wan
+
+Actors: undefined
+
+Summary: Two strangers, who awaken in a room with no recollection of how they got there, soon discover they're pawns in a deadly game perpetrated by a notorious serial killer.
+------------------------------------------------------------
+
+Title: Saw
+
+Year: 2004
+
+IMDB Rating: 7.6
+
+Rotten Tomatoes Rating: 49%
+
+Country: USA
+
+Language: English
+
+Genre(s): Horror, Mystery
+
+Director: James Wan
+
+Actors: undefined
+
+Summary: Two strangers, who awaken in a room with no recollection of how they got there, soon discover they're pawns in a deadly game perpetrated by a notorious serial killer.
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+
+Venue: Accorhotels Arena
+
+Country: France
+
+Date: 2019-03-08T19:00:00
+------------------------------------------------------------
+

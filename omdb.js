@@ -4,12 +4,11 @@ var axios = require("axios");
 var OmdbApp = function() {
   var divider = "\n------------------------------------------------------------\n\n";
 
-  this.findMovie = function(show) {
-    var URL = "http://www.omdbapi.com/?apikey=de45c0f0&t=" + show;
+  this.findMovie = function(movie) {
+    var URL = "http://www.omdbapi.com/?apikey=de45c0f0&t=" + movie;
 
     axios.get(URL).then(function(response) {
       var jsonData = response.data;
-      console.log(jsonData)
       var movieData = [
         "Title: " + jsonData.Title,
         "Year: " + jsonData.Year,
@@ -19,7 +18,7 @@ var OmdbApp = function() {
         "Language: " + jsonData.Language,
         "Genre(s): " + jsonData.Genre,
         "Director: " + jsonData.Director,
-        "Actors: " + jsonData.Actors,
+        "Actors: " + jsonData.Actor,
         "Summary: " + jsonData.Plot
       ].join("\n\n");
 

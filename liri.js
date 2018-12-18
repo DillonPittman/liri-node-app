@@ -7,7 +7,7 @@ var OmdbApp = require("./omdb.js");
 
 
 var Spotify = new SpotifyApp();
-// var bandsInTown = new BandsInTownApp();
+var BandsInTown = new BandsInTownApp();
 var Omdb = new OmdbApp();
 
 inquirer
@@ -22,8 +22,11 @@ inquirer
   // console.log('HERE', inquirerResponse)
   switch(inquirerResponse.selection.replace(/\s/g, '').toLowerCase()){
     case "spotify": spotify(); break;
+    case "s": spotify(); break;
     case "bandsintown": bandsintown(); break;
+    case "b": bandsintown(); break;
     case "omdb": omdb(); break;
+    case "o": omdb(); break;
     default: console.log("There was a problem with your entry: " + inquirerResponse.selection)
   }
 })
@@ -51,12 +54,12 @@ function bandsintown(){
     {
       type:"input",
       message: "What artist would you like to search for?",
-      name: "artist"
+      name: "band"
     }
   ])
 .then(function(inquirerResponse){
-  console.log('BANDS', inquirerResponse.artist)
-  // bandsInTown.findArtist(inquirerResponse.artist)
+  // console.log('BANDS', inquirerResponse.band)
+  BandsInTown.findArtist(inquirerResponse.band)
 })
 };
 

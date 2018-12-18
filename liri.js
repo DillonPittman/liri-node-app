@@ -26,7 +26,7 @@ inquirer
       case "b": bandsintown(); break;
       case "omdb": omdb(); break;
       case "o": omdb(); break;
-      default: console.log("There was a problem with your entry: " + inquirerResponse.selection)
+      default: doIt();
     }
   })
 
@@ -70,4 +70,19 @@ function omdb() {
     .then(function (inquirerResponse) {
       Omdb.findMovie(inquirerResponse.movie)
     })
+};
+
+function doIt() {
+  fs.readFile("random.txt", "utf8", function (error, data) {
+    var dataArr = data.split(",");
+    if (dataArr[0].toLowerCase().charAt(0) === "s") {
+      Spotify.findSong(dataArr[1]);
+    } else if (dataArr[0].toLowerCase().charAt(0) === "b") {
+      BandsInTown.findArtist(dataArr[1])
+    } else if (dataArr[0].toLowerCase().charAt(0) === "o") {
+      Omdb.findMovie(dataArr[1]);
+    } else {
+      console.log("random.txt is formatted incorrectly.")
+    }
+  });
 };

@@ -9,6 +9,7 @@ var OmdbApp = function () {
 
     axios.get(URL).then(function (response) {
       var jsonData = response.data;
+      // console.log(response.data)
       var movieData = [
         "Title: " + jsonData.Title,
         "Year: " + jsonData.Year,
@@ -18,7 +19,7 @@ var OmdbApp = function () {
         "Language: " + jsonData.Language,
         "Genre(s): " + jsonData.Genre,
         "Director: " + jsonData.Director,
-        "Actors: " + jsonData.Actor,
+        "Actors: " + jsonData.Actors,
         "Summary: " + jsonData.Plot
       ].join("\n\n");
 
